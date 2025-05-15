@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right-Aligned Inverted Triangle</title>
+</head>
+<body>
+    <p id="demo" style="font-family: monospace; white-space: pre;"></p>
+
+    <script>
+        function printTriangle3() {
+            let n = 6;
+            let value = "";
+            for (let i = 0; i < n; i++) {
+                // Add leading spaces
+                for (let s = 0; s < i; s++) {
+                    value += " ";
+                }
+                // Add stars
+                for (let j = 0; j < n - i; j++) {
+                    value += "*";
+                }
+                value += "\n";
+            }
+
+            document.getElementById("demo").textContent = value;
+        }
+
+        printTriangle3();
+    </script>
+</body>
+</html>
